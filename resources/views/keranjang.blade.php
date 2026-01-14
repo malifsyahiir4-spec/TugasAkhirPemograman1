@@ -145,13 +145,13 @@ th {
 <header>
   <h1>Nand Second</h1>
   <nav>
-    <a href="index.html">Beranda</a>
-    <a href="produk.html">Produk</a>
+    <a href="{{route('dasboard')}}">Beranda</a>
+    <a href="{{route('produk')}}">Produk</a>
     <div class="search-box">
       <img src="images/download.jpg" alt="Cari">
       <input type="text" id="searchInput" placeholder="Cari produk...">
     </div>
-    <button class="icon-btn" onclick="window.location.href='keranjang.html'">
+    <button class="icon-btn" onclick="window.location.href='{{route('keranjang')}}'">
       <img src="images/keranjang.jpg" alt="Keranjang">
     </button>
   </nav>
@@ -235,7 +235,7 @@ function goCheckout(){
     return;
   }
   localStorage.setItem('checkoutData', JSON.stringify(cart));
-  window.location.href = 'checkout.html';
+  window.location.href = 'checkout';
 }
 
 // Pencarian

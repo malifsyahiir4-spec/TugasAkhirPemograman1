@@ -58,7 +58,7 @@ checkoutData.forEach(item => {
 document.getElementById('total-price').innerText = 'Total: Rp ' + total.toLocaleString();
 
 function proceedForm(){
-  window.location.href = 'form.html'; // Halaman form
+  window.location.href = "{{route('form')}}"; // Halaman form
 }
 </script>
 

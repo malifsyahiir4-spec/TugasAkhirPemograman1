@@ -224,7 +224,7 @@ footer a:hover { color:#555; }
         <input type="text" id="searchInput" placeholder="Cari produk...">
         <img src="images/download.jpg" alt="Cari">
       </div>
-      <button class="icon-btn" onclick="window.location.href='keranjang.html'">
+      <button class="icon-btn" onclick="window.location.href='{{route('keranjang')}}'">
         <img src="images/keranjang.jpg" alt="Keranjang">
       </button>
     </div>
@@ -323,7 +323,7 @@ produkList.forEach(p => {
 
 // Search functionality
 const searchInput = document.getElementById('searchInput');
-searchInput.addEventListener('keypress', (e) => {
+searchInput.addEventListener('keypress', function (e) => {
   if (e.key === 'Enter') {
     e.preventDefault();
     const keyword = searchInput.value.trim();

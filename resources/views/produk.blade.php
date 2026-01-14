@@ -84,7 +84,7 @@
 
     <!-- ikon keranjang tanpa efek hitam -->
     <button class="icon-btn" onclick="window.location.href='keranjang.html'" title="Keranjang">
-      <img src="images/keranjang.jpg" alt="Keranjang">
+      <a href="{{route('keranjang')}}"><img src="images/keranjang.jpg" alt="Keranjang"></a>
     </button>
   </nav>
 </header>
@@ -108,7 +108,7 @@ function renderProduk(list){
     const card = document.createElement('div');
     card.className = 'produk-card';
     card.innerHTML = `
-      <a href="detail-produk.html?id=${produk.id}">
+      <a href="detail-produk?id=${produk.id}">
         <img src="${produk.image}" alt="${produk.nama}">
         <div class="overlay">
           <p>${produk.nama}</p>

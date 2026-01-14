@@ -50,7 +50,7 @@ textarea { resize: vertical; }
     <div id="itemsContainer"></div>
     <div class="total" id="totalHarga"></div>
     <button class="btn" id="bayarBtn">Bayar Sekarang</button>
-    <a href="produk.html" class="back-link">← Kembali ke Produk</a>
+    <a href="{{route('produk')}}" class="back-link">← Kembali ke Produk</a>
   </div>
 </div>
 
@@ -92,7 +92,7 @@ document.getElementById('bayarBtn').onclick = () => {
   alert(`Terima kasih ${nama}! Pesanan Anda sebesar Rp ${total.toLocaleString()} berhasil.`);
   localStorage.removeItem('checkoutItem');
   localStorage.removeItem('cart');
-  window.location.href = 'produk.html';
+  window.location.href = 'produk';
 };
 </script>
 

@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class KeranjangController extends Controller
 {
-    public function keranjang()
+    public function index()
     {
         return view('keranjang');
     }
